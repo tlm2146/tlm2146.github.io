@@ -1,8 +1,8 @@
 // setup() is called once at page-load
-// let width = 800; //1600;
-// let height = 800; //1200;
-let width = 1200;
-let height = 1200;
+let width = 800; //1600;
+let height = 800; //1200;
+// let width = 1200;
+// let height = 1200;
 let divisions = 3;
 let section_width = width  / divisions;
 let section_height = height / divisions;
@@ -23,6 +23,7 @@ let center_sec_y = height / 2;
 
 let priorMinute;
 let priorHour;
+let priorDay;
 
 
 let sMax = 60;
@@ -65,7 +66,13 @@ function draw() {
 
     let currentHour = hour();
     let currentMinute = minute();
+    let currentDay = day();
 
+    if (currentDay !== priorDay) {
+        priorDay = currentDay;
+
+        drawHoursBackground();
+    }
 
     if (currentHour !== priorHour) {
         priorHour = currentHour;
