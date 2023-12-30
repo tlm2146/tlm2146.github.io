@@ -1,13 +1,11 @@
-// setup() is called once at page-load
-let width = 800; //1600;
-let height = 800; //1200;
-// let width = 1200;
-// let height = 1200;
+
+// let width = 800; 
+// let height = 800;
+let width = 1200;
+let height = 1200;
 let divisions = 3;
 let section_width = width  / divisions;
 let section_height = height / divisions;
-// let radians_start = radians(0);
-// let radians_stop = radians(360);
 
 let center_hr_x = width /6;
 let center_min_x = 3 * center_hr_x;
@@ -30,6 +28,7 @@ let sMax = 60;
 let mMax = 60;
 let hMax = 24;
 
+// setup() is called once at page-load
 function setup() {
     
     createCanvas(width, height); // make an HTML canvas element width x height pixels
