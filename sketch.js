@@ -91,14 +91,14 @@ function drawSecondsBackground() {
 
 
 function drawMinutesBackground() {
-    for (let m = mMax; m >= 0; m--) {
+    for (let m = mMax; m > 0; m--) {
         fill(0, 255, 0,  m/mMax* 50);
         circle(center_min_x, center_min_y, m * section_width /mMax);
     }
 }
 
 function drawHoursBackground() {
-    for (let h = hMax; h >= 0; h--) {
+    for (let h = hMax; h > 0; h--) {
         fill(0, 0, 255, h/hMax* 100);
         circle(center_hr_x, center_hr_y, h * section_width /hMax);
     }
